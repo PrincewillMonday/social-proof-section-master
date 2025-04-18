@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-color: hsl(0, 0%, 100%);
+    padding: 6em 8em;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    width: 8em;
+    color: hsl(300, 43%, 22%);
+    font-weight: 700;
+}
+.content {
+    width: 50%;
+}
+.content p {
+    font-size: 1rem;
+    width: 25em;
+    margin-top: 1.5em;
+    color: hsl(300, 43%, 22%);
+}
+
+/* Rated Info */
+.rated-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 3em;
+}
+
+
+/* For reviews */
+.rated-container .reviews {
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    padding: 0.8em 1em;
+    width: 90%;
+    border-radius: 5px;
+}
+
+.reviews .reviews-text, .guru-text, .besttech-text {
+    margin-left: 2em;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+/* For guru */
+.rated-container .guru {
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    padding: 0.8em 1em;
+    width: 90%;
+    border-radius: 5px;
+    margin: 1em 0 0 2.5em;
+}
+
+/* For besttech */
+.rated-container .besttech {
+    background-color: hsl(300, 24%, 96%);
+    display: flex;
+    padding: 0.8em 1em;
+    width: 90%;
+    border-radius: 5px;
+    margin: 1em 0 0 4.5em;
+}
+
+/* Footer section */
+footer {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 2em 0;
+    gap: 2em;
+}
+
+footer .first-buyer, .second-buyer, .third-buyer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
+    background-color: hsl(300, 43%, 22%);
+    /* width: 80%; */
+    border-radius: 10px;
+}
+
+footer .first-buyer .heading, .second-buyer .heading, .third-buyer .heading {
+    display: flex;
+    gap: 1em;
+}
+footer .first-buyer .heading img, .second-buyer .heading img, .third-buyer .heading img {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.image {
+    width: 15%;
+}
+.word {
+    width: 100%;
+    color: white;
+    font-size: 15px;
+}
+.describe {
+    color: hsl(0, 0%, 100%);
+    margin-top: 1em;
+    font-size: 15px;
+    line-height: 2;
+}
+span {
+    color: hsl(333, 80%, 67%);
+    font-size: 13px;
+}
+
+.second-buyer {
+    margin-top: 3em;
+}
+.third-buyer {
+    margin-top: 6em;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        padding: 2em 1em;
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+        background-position: top left, bottom right;
+    }
+    main {
+        flex-direction: column;
+    }
+    .content h1 {
+        font-size: 2rem;
+        width: 100%;
+        font-weight: 900;
+    }
+    .content p {
+        width: 100%;
+    }
+    .rated-container {
+        width: 100%;
+    }
+    .second-buyer {
+        margin-top: 0;
+    }
+    .third-buyer {
+        margin-top: 0;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 375px) {
+    .content {
+        width: 100%;
+        text-align: center;
+    }
+    .content h1 {
+        width: 8em;
+        margin: 0 auto;
+        font-weight: 900;
+    }
+    .rated-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2em 0;
+    }
+    .rated-container .reviews {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .rated-container .guru {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 1em 0 0 0;
+    }
+    
+    .rated-container .besttech {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        margin: 1em 0 0 0;
+    }
+
+    .reviews .reviews-text, .guru-text, .besttech-text {
+        margin-left: 0;
+        margin-top: 0.5em;
+        font-weight: 700;
+        color: hsl(300, 43%, 22%);
+    }
+    footer{
+        gap: 1em;
+    }
+}
